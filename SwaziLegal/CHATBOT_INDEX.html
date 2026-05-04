@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwaziLegal Chatbot Integration - Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #0d47a1;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .status {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #0d47a1;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s;
+            align-self: flex-start;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #0d47a1;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 1rem;
+        }
+
+        .files-list {
+            list-style: none;
+            margin: 0;
+        }
+
+        .files-list li {
+            padding: 1rem;
+            background: #f9f9f9;
+            margin-bottom: 0.5rem;
+            border-left: 4px solid #0d47a1;
+            border-radius: 4px;
+        }
+
+        .files-list strong {
+            color: #0d47a1;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .files-list small {
+            color: #999;
+            display: block;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .timeline-number {
+            background: #0d47a1;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content h4 {
+            color: #0d47a1;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-content p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            background: #f0f7ff;
+            border-radius: 8px;
+            border-left: 4px solid #0d47a1;
+        }
+
+        .feature h4 {
+            color: #0d47a1;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .comparison-quick {
+            overflow-x: auto;
+        }
+
+        .comparison-quick table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .comparison-quick th,
+        .comparison-quick td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-quick th {
+            background: #f5f5f5;
+            color: #0d47a1;
+            font-weight: 600;
+        }
+
+        .comparison-quick tr:hover {
+            background: #f9f9f9;
+        }
+
+        .check {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .highlight h3 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight p {
+            color: #856404;
+            margin-bottom: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <span class="status">✓ Production Ready</span>
+            <h1>🤖 SwaziLegal Chatbot Integration</h1>
+            <p class="subtitle">Complete chatbot solution with multiple platform options</p>
+            <p style="color: #666; font-size: 0.95rem;">Everything you need to add AI-powered chatbot to your website</p>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="highlight">
+            <h3>⚡ Quick Start (Choose Your Path)</h3>
+            <p><strong>Path 1:</strong> Use WordPress Plugin (Easiest) → Install swazilegal-chatbot folder → Configure in Admin → Done!</p>
+            <p><strong>Path 2:</strong> Use Chatbot Service (Fastest) → Get API ID → Add script to header → Done!</p>
+            <p><strong>Path 3:</strong> Use Custom Chatbot (Most Control) → Use HTML + JS → Customize FAQ → Done!</p>
+        </div>
+
+        <!-- Main Options -->
+        <div class="grid">
+            <!-- WordPress Plugin -->
+            <div class="card">
+                <div class="card-icon">🔌</div>
+                <h3>WordPress Plugin</h3>
+                <p>Ready-to-use plugin with admin panel. Supports Drift, Botpress, Intercom, and custom chatbot. No coding needed!</p>
+                <a href="#plugin-section" class="btn">Learn More</a>
+            </div>
+
+            <!-- Integration Guide -->
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Integration Guide</h3>
+                <p>Comprehensive documentation for all setup methods. Step-by-step instructions for each chatbot option.</p>
+                <a href="CHATBOT_INTEGRATION.md" class="btn">Read Guide</a>
+            </div>
+
+            <!-- Quick Reference -->
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Quick Reference</h3>
+                <p>Fast lookup guide for common tasks. Customization tips, troubleshooting, and API credentials.</p>
+                <a href="CHATBOT_QUICK_REFERENCE.md" class="btn">Quick Ref</a>
+            </div>
+
+            <!-- Interactive Demo -->
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Interactive Demo</h3>
+                <p>Try the chatbot live, compare features, see pricing. Full comparison of all chatbot options.</p>
+                <a href="chatbot-integration.html" class="btn">Open Demo</a>
+            </div>
+
+            <!-- Setup Summary -->
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Setup Summary</h3>
+                <p>Overview of all included files, decision guides, and deployment checklist.</p>
+                <a href="CHATBOT_SETUP_SUMMARY.md" class="btn">View Summary</a>
+            </div>
+
+            <!-- Plugin README -->
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>Plugin README</h3>
+                <p>Plugin-specific documentation including installation, settings, FAQ, and troubleshooting.</p>
+                <a href="swazilegal-chatbot/README.md" class="btn">Plugin Docs</a>
+            </div>
+        </div>
+
+        <!-- Files Included -->
+        <div class="section">
+            <h2>📦 What's Included</h2>
+            <ul class="files-list">
+                <li>
+                    <strong>CHATBOT_SETUP_SUMMARY.md</strong>
+                    <small>Overview, decision matrix, and quick setup guide</small>
+                </li>
+                <li>
+                    <strong>CHATBOT_INTEGRATION.md</strong>
+                    <small>Complete technical guide with all integration methods</small>
+                </li>
+                <li>
+                    <strong>CHATBOT_QUICK_REFERENCE.md</strong>
+                    <small>Quick lookup for setup, customization, and common tasks</small>
+                </li>
+                <li>
+                    <strong>chatbot-integration.html</strong>
+                    <small>Interactive demo and comparison tool (open in browser)</small>
+                </li>
+                <li>
+                    <strong>swazilegal-chatbot/</strong>
+                    <small>WordPress plugin folder (ready to install)</small>
+                </li>
+                <li>
+                    <strong>swazilegal-chatbot/swazilegal-chatbot.php</strong>
+                    <small>Main plugin file with settings panel</small>
+                </li>
+                <li>
+                    <strong>swazilegal-chatbot/css/chatbot.css</strong>
+                    <small>Customizable chatbot styling</small>
+                </li>
+                <li>
+                    <strong>swazilegal-chatbot/js/chatbot.js</strong>
+                    <small>Chatbot logic with customizable FAQ data</small>
+                </li>
+                <li>
+                    <strong>swazilegal-chatbot/README.md</strong>
+                    <small>Plugin-specific documentation</small>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>Multiple Options</h4>
+                    <p>Choose between Drift, Botpress, Intercom, or custom chatbot</p>
+                </div>
+                <div class="feature">
+                    <h4>Easy Installation</h4>
+                    <p>WordPress plugin with admin settings panel</p>
+                </div>
+                <div class="feature">
+                    <h4>Mobile Responsive</h4>
+                    <p>Works perfectly on all devices and screen sizes</p>
+                </div>
+                <div class="feature">
+                    <h4>Customizable</h4>
+                    <p>Change colors, size, position, and FAQ responses</p>
+                </div>
+                <div class="feature">
+                    <h4>FAQ Database</h4>
+                    <p>Pre-loaded with SwaziLegal content, easy to modify</p>
+                </div>
+                <div class="feature">
+                    <h4>No Coding Required</h4>
+                    <p>Use plugin settings, or edit code for more control</p>
+                </div>
+                <div class="feature">
+                    <h4>Professional Design</h4>
+                    <p>SwaziLegal branded with modern styling</p>
+                </div>
+                <div class="feature">
+                    <h4>Free Options</h4>
+                    <p>All services have free tiers available</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="section">
+            <h2>🚀 Getting Started (3 Steps)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h4>Choose Your Method</h4>
+                        <p><strong>Option A:</strong> WordPress Plugin (easiest, no coding)</p>
+                        <p><strong>Option B:</strong> Manual Setup (copy-paste code)</p>
+                        <p><strong>Option C:</strong> Custom Chatbot (full control)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h4>Follow Setup Instructions</h4>
+                        <p>See CHATBOT_INTEGRATION.md for your chosen method</p>
+                        <p>Get API credentials if using third-party service</p>
+                        <p>Takes 2-10 minutes depending on your choice</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h4>Test & Customize</h4>
+                        <p>Test chatbot on your website</p>
+                        <p>Customize colors, FAQ, and appearance (optional)</p>
+                        <p>Monitor analytics and improve over time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chatbot Options -->
+        <div class="section">
+            <h2>🤖 Chatbot Options Comparison</h2>
+            <div class="comparison-quick">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chatbot</th>
+                            <th>Setup Time</th>
+                            <th>Free Tier</th>
+                            <th>Live Chat</th>
+                            <th>Customization</th>
+                            <th>Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Drift</strong></td>
+                            <td>2 min</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td>Medium</td>
+                            <td><strong style="color: #4CAF50;">⭐ Recommended</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Botpress</strong></td>
+                            <td>5 min</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td>High</td>
+                            <td>Great for builders</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Intercom</strong></td>
+                            <td>3 min</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td>Medium</td>
+                            <td>Professional teams</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom</strong></td>
+                            <td>10 min</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td>Very High</td>
+                            <td>Full control</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Plugin Section -->
+        <div class="section" id="plugin-section">
+            <h2>🔌 WordPress Plugin Installation</h2>
+            <h3 style="color: #0d47a1; margin-top: 1.5rem; margin-bottom: 1rem;">Step 1: Install Plugin</h3>
+            <ol style="color: #666; margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Copy <code style="background: #f5f5f5; padding: 0.2rem 0.5rem; border-radius: 3px;">swazilegal-chatbot</code> folder to <code style="background: #f5f5f5; padding: 0.2rem 0.5rem; border-radius: 3px;">wp-content/plugins/</code></li>
+                <li>Go to WordPress Admin → Plugins</li>
+                <li>Find "SwaziLegal Chatbot" and click "Activate"</li>
+            </ol>
+
+            <h3 style="color: #0d47a1; margin-top: 1.5rem; margin-bottom: 1rem;">Step 2: Configure Settings</h3>
+            <ol style="color: #666; margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Go to <strong>Admin → Chatbot → Settings</strong></li>
+                <li>Choose your chatbot type (Drift, Botpress, Intercom, or Custom)</li>
+                <li>Enter API credentials if using third-party service</li>
+                <li>Check "Enable Chatbot"</li>
+                <li>Click "Save Changes"</li>
+            </ol>
+
+            <h3 style="color: #0d47a1; margin-top: 1.5rem; margin-bottom: 1rem;">Step 3: Done!</h3>
+            <p style="color: #666;">Your chatbot now appears on all pages. Visit your website to see it in action!</p>
+        </div>
+
+        <!-- Documentation Links -->
+        <div class="section">
+            <h2>📖 Documentation</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <h4 style="color: #0d47a1; margin-bottom: 0.5rem;">For Quick Setup</h4>
+                    <p style="color: #666; margin-bottom: 1rem;">Read in 5 minutes, set up in 10 minutes</p>
+                    <a href="CHATBOT_QUICK_REFERENCE.md" class="btn">Quick Reference</a>
+                </div>
+                <div>
+                    <h4 style="color: #0d47a1; margin-bottom: 0.5rem;">For Complete Guide</h4>
+                    <p style="color: #666; margin-bottom: 1rem;">All methods explained with code examples</p>
+                    <a href="CHATBOT_INTEGRATION.md" class="btn">Full Guide</a>
+                </div>
+                <div>
+                    <h4 style="color: #0d47a1; margin-bottom: 0.5rem;">For Interactive Demo</h4>
+                    <p style="color: #666; margin-bottom: 1rem;">Try chatbot, see options, test features</p>
+                    <a href="chatbot-integration.html" class="btn">Open Demo</a>
+                </div>
+                <div>
+                    <h4 style="color: #0d47a1; margin-bottom: 0.5rem;">For Plugin Help</h4>
+                    <p style="color: #666; margin-bottom: 1rem;">Plugin-specific docs and settings</p>
+                    <a href="swazilegal-chatbot/README.md" class="btn">Plugin Docs</a>
+                </div>
+                <div>
+                    <h4 style="color: #0d47a1; margin-bottom: 0.5rem;">For Overview</h4>
+                    <p style="color: #666; margin-bottom: 1rem;">Decision guide and checklist</p>
+                    <a href="CHATBOT_SETUP_SUMMARY.md" class="btn">Setup Summary</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support -->
+        <div class="section">
+            <h2>💬 Support & Contact</h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">For help with setup or questions about your chatbot:</p>
+            <div style="background: #f0f7ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0d47a1;">
+                <p><strong>📞 Phone:</strong> +268 2687 8132527</p>
+                <p><strong>💬 WhatsApp:</strong> +268 78132527</p>
+                <p><strong>📧 Email:</strong> info@swazilegal.sz</p>
+                <p><strong>🌐 Website:</strong> <a href="https://swazilegal.sz" target="_blank">https://swazilegal.sz</a></p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 2rem; color: #999;">
+            <p>SwaziLegal Chatbot Integration v1.0.0 | Ready for Production</p>
+            <p style="font-size: 0.9rem;">All services include free tiers. Choose the option that best fits your needs.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<?php get_header(); ?>
+
+<main id="primary" class="site-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background: var(--gradient-subtle); min-height: 50vh;">
+        <div class="hero-content">
+            <h1 style="color: white;">Privacy & Legal</h1>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section style="background: linear-gradient(135deg, rgba(13, 71, 161, 0.04) 0%, rgba(33, 150, 243, 0.02) 100%); padding: 4rem 1.5rem; position: relative;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <!-- PRIVACY POLICY -->
+            <div style="margin-bottom: 4rem;">
+                <h2>Privacy Policy</h2>
+                <p style="color: var(--gray-dark); margin-bottom: 1.5rem;">
+                    <strong>Last Updated: <?php echo date('F j, Y'); ?></strong>
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">1. Introduction</h3>
+                <p>
+                    SwaziLegal ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains 
+                    how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">2. Information We Collect</h3>
+                <p>
+                    We may collect information about you in a variety of ways. The information we may collect on the site includes:
+                </p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li><strong>Personal Data:</strong> Name, email address, phone number, and other contact information you provide</li>
+                    <li><strong>Legal Information:</strong> Details about your legal matter shared during consultations</li>
+                    <li><strong>Browsing Data:</strong> Information about how you interact with our website</li>
+                    <li><strong>Device Information:</strong> IP address, browser type, and device identifiers</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">3. How We Use Your Information</h3>
+                <p>
+                    We use the information we collect for various purposes, including:
+                </p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Providing and improving our legal services</li>
+                    <li>Responding to your inquiries and requests</li>
+                    <li>Processing your consultations and appointments</li>
+                    <li>Communicating with you about your legal matters</li>
+                    <li>Protecting against fraud and abuse</li>
+                    <li>Complying with legal obligations</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">4. Attorney-Client Privilege</h3>
+                <p>
+                    All communications between you and our attorneys are protected by attorney-client privilege. 
+                    We maintain strict confidentiality of all information shared during legal consultations and representation.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">5. Data Security</h3>
+                <p>
+                    We implement appropriate technical and organizational measures to protect your personal information against 
+                    unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet 
+                    is 100% secure.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">6. Data Retention</h3>
+                <p>
+                    We retain your personal information for as long as necessary to provide our services and comply with legal obligations. 
+                    Upon termination of our relationship, we will securely dispose of or anonymize your information as required by law.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">7. Third-Party Services</h3>
+                <p>
+                    We do not sell, trade, or rent personal information to third parties. We may share information with service providers 
+                    who assist us in operating our website and providing services, subject to confidentiality agreements.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">8. Your Rights</h3>
+                <p>
+                    You have the right to:
+                </p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Opt-out of certain communications</li>
+                    <li>Request a copy of your data</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">9. Contact Us</h3>
+                <p>
+                    If you have questions about this Privacy Policy or our privacy practices, please contact us at:
+                </p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li><strong>Email:</strong> <a href="mailto:info@swazilegal.sz">info@swazilegal.sz</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+26878132527">+268 2687 8132527</a></li>
+                    <li><strong>Location:</strong> Mbabane, Eswatini</li>
+                </ul>
+            </div>
+
+            <!-- TERMS OF SERVICE -->
+            <div style="margin-bottom: 4rem; padding-top: 2rem; border-top: 2px solid var(--gray-medium);">
+                <h2>Terms of Service</h2>
+                <p style="color: var(--gray-dark); margin-bottom: 1.5rem;">
+                    <strong>Last Updated: <?php echo date('F j, Y'); ?></strong>
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">1. Agreement to Terms</h3>
+                <p>
+                    By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">2. Use License</h3>
+                <p>
+                    Permission is granted to temporarily download one copy of the materials (information or software) on SwaziLegal's 
+                    website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, 
+                    and under this license you may not:
+                </p>
+                <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose or for any public display</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">3. Disclaimer</h3>
+                <p>
+                    The materials on SwaziLegal's website are provided on an 'as is' basis. SwaziLegal makes no warranties, 
+                    expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, 
+                    implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement 
+                    of intellectual property or other violation of rights.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">4. Limitations</h3>
+                <p>
+                    In no event shall SwaziLegal or its suppliers be liable for any damages (including, without limitation, damages 
+                    for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials 
+                    on SwaziLegal's website.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">5. Accuracy of Materials</h3>
+                <p>
+                    The materials appearing on SwaziLegal's website could include technical, typographical, or photographic errors. 
+                    SwaziLegal does not warrant that any of the materials on our website are accurate, complete, or current. 
+                    SwaziLegal may make changes to the materials contained on its website at any time without notice.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">6. Links</h3>
+                <p>
+                    SwaziLegal has not reviewed all of the sites linked to its website and is not responsible for the contents of any 
+                    such linked site. The inclusion of any link does not imply endorsement by SwaziLegal of the site. Use of any such 
+                    linked website is at the user's own risk.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">7. Modifications</h3>
+                <p>
+                    SwaziLegal may revise these terms of service for our website at any time without notice. By using this website, 
+                    you are agreeing to be bound by the then current version of these terms of service.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">8. Governing Law</h3>
+                <p>
+                    These terms and conditions are governed by and construed in accordance with the laws of Eswatini, 
+                    and you irrevocably submit to the exclusive jurisdiction of the courts in Eswatini.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">9. Limitation of Liability</h3>
+                <p>
+                    <strong>IMPORTANT:</strong> Information on this website is for general informational purposes only and should not 
+                    be construed as legal advice. No attorney-client relationship is formed by access to this website. You should not 
+                    take any action based on the information contained herein without first consulting with a qualified attorney.
+                </p>
+            </div>
+
+            <!-- DISCLAIMER -->
+            <div style="padding: 2rem; background: var(--gray-light); border-left: 4px solid var(--accent-blue); border-radius: 8px;">
+                <h3 style="color: var(--primary-dark); margin-bottom: 1rem;"><i class="fas fa-gavel"></i> Important Legal Disclaimer</h3>
+                <p style="margin-bottom: 1rem;">
+                    <strong>This website does not constitute legal advice.</strong> Information provided on this website is 
+                    general in nature and may not address your specific situation. The transmission of information through this 
+                    website does not create an attorney-client relationship.
+                </p>
+                <p>
+                    Before taking any legal action, you should consult with a qualified attorney who can evaluate your specific 
+                    circumstances and provide appropriate legal guidance. Every legal situation is unique, and what may be applicable 
+                    in one context may not be in another.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<?php get_footer(); ?>

@@ -1,0 +1,551 @@
+<?php get_header(); ?>
+
+<main id="primary" class="site-main">
+
+    <!-- HERO SECTION WITH PARALLAX -->
+    <section class="hero" id="hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/hero/Hero.jpeg');">
+        <div class="hero-content">
+            <h1 class="text-reveal">
+                Excellence in
+                <span class="accent">Legal Solutions</span>
+            </h1>
+            <p class="hero-subtitle text-reveal">
+                Your trusted partner for comprehensive legal services across Eswatini.
+                Protecting your rights with expertise, dedication, and professionalism.
+            </p>
+
+            <div class="hero-cta text-reveal" style="margin-top: 3rem;">
+                <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt"></i> Schedule Consultation
+                </a>
+                <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-primary">
+                    <i class="fas fa-compass"></i> Explore Services
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-gradient-bottom"></div>
+
+    </section>
+
+    <!-- OVERLAPPING FEATURES -->
+    <div class="section-container overlap-section">
+        <div class="overlap-grid text-reveal">
+            <div class="overlap-card">
+                <div class="feature-icon"
+                    style="background: none; box-shadow: none; margin-left: 0; text-align: left; width: auto; height: auto; margin-bottom: 1rem;">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3 style="color: var(--primary-dark); font-size: 1.4rem; margin-bottom: 1rem;">Expert Representation
+                </h3>
+                <p style="color: var(--gray-dark); margin: 0;">20+ years of proven experience in diverse legal practice
+                    areas</p>
+                <div style="margin-top: 1.5rem;"><a href="<?php echo esc_url( home_url( '/about' ) ); ?>" style="font-size: 0.9rem; font-weight: 600;">Learn
+                        more <i class="fas fa-chevron-right" style="font-size: 0.8rem; margin-left: 5px;"></i></a></div>
+            </div>
+
+            <div class="overlap-card">
+                <div class="feature-icon"
+                    style="background: none; box-shadow: none; margin-left: 0; text-align: left; width: auto; height: auto; margin-bottom: 1rem;">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 style="color: var(--primary-dark); font-size: 1.4rem; margin-bottom: 1rem;">Proven Track Record</h3>
+                <p style="color: var(--gray-dark); margin: 0;">150+ successful cases with unparalleled client
+                    satisfaction</p>
+                <div style="margin-top: 1.5rem;"><a href="<?php echo esc_url( home_url( '/practices' ) ); ?>"
+                        style="font-size: 0.9rem; font-weight: 600;">Our results <i class="fas fa-chevron-right"
+                            style="font-size: 0.8rem; margin-left: 5px;"></i></a></div>
+            </div>
+
+            <div class="overlap-card">
+                <div class="feature-icon"
+                    style="background: none; box-shadow: none; margin-left: 0; text-align: left; width: auto; height: auto; margin-bottom: 1rem;">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 style="color: var(--primary-dark); font-size: 1.4rem; margin-bottom: 1rem;">Client-Focused</h3>
+                <p style="color: var(--gray-dark); margin: 0;">Your goals completely drive our legal strategy and
+                    solutions</p>
+                <div style="margin-top: 1.5rem;"><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"
+                        style="font-size: 0.9rem; font-weight: 600;">Contact us <i class="fas fa-chevron-right"
+                            style="font-size: 0.8rem; margin-left: 5px;"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE BENTO GRID SECTION -->
+    <section style="padding: 5rem 1.5rem; background: var(--white-off); position: relative; overflow: hidden;">
+        <div class="section-container">
+            <div class="section-title" style="margin-bottom: 3rem; text-align: center;">
+                <h2 class="text-reveal">Experience the Difference</h2>
+                <p class="section-subtitle text-reveal" style="margin: 0 auto;">Modern legal solutions powered by
+                    technology, collaboration, and proven expertise.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Card 1: Unified dashboard (Top Left) -->
+                <div class="bento-item light-glass text-reveal">
+                    <h3>Unified Client Portal</h3>
+                    <p>Track your case progress, documents, and important dates in one intuitive interface.</p>
+
+                    <div class="bento-mockup" style="margin-top: 2rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; align-items: center;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark);">Case Status
+                                Overview</span>
+                            <span
+                                style="font-size: 0.8rem; font-weight: 600; color: #4CAF50; background: rgba(76, 175, 80, 0.1); padding: 4px 10px; border-radius: 20px;"><i
+                                    class="fas fa-circle" style="font-size: 0.5rem; margin-right: 5px;"></i>
+                                Active</span>
+                        </div>
+                        <div class="mockup-bar"
+                            style="width: 85%; background: linear-gradient(90deg, var(--primary-blue), var(--accent-light-blue)); height: 16px; margin-bottom: 1.5rem; border-radius: 8px;">
+                        </div>
+                        <div style="display: flex; gap: 15px;">
+                            <div
+                                style="height: 48px; width: 48px; border-radius: 12px; background: rgba(13, 71, 161, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary-blue); font-size: 1.2rem; box-shadow: inset 0 2px 4px rgba(255,255,255,0.8);">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div
+                                style="height: 48px; width: 48px; border-radius: 12px; background: rgba(13, 71, 161, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary-blue); font-size: 1.2rem; box-shadow: inset 0 2px 4px rgba(255,255,255,0.8);">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Collaborative (Top Middle) -->
+                <div class="bento-item dark-glass text-reveal">
+                    <div
+                        style="position: absolute; right: -40px; top: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(33,150,243,0.2) 0%, transparent 70%); border-radius: 50%; z-index: 1;">
+                    </div>
+                    <h3>Collaborative Teams</h3>
+                    <p>Our expert attorneys work together seamlessly to handle complex legal scenarios.</p>
+
+                    <div class="bento-mockup"
+                        style="margin-top: 2rem; background: var(--primary-blue); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 15px; padding: 12px 15px; background: var(--primary-blue); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="mockup-avatar"
+                                style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); background-size: cover; border-color: rgba(255,255,255,0.2);">
+                            </div>
+                            <span style="font-size: 0.9rem; color: #fff; font-weight: 500;">Phetie - Senior
+                                Partner</span>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; margin-left: 25px; padding: 12px 15px; background: var(--primary-blue); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="mockup-avatar"
+                                style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg'); background-size: cover; border-color: rgba(255,255,255,0.2);">
+                            </div>
+                            <span style="font-size: 0.9rem; color: #fff; font-weight: 500;">Jessica- Associate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tall Card (Right) -->
+                <div class="bento-item row-span-2 text-reveal"
+                    style="padding: 0; background: none; border: none; box-shadow: none;">
+                    <!-- Image Background -->
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/team/mabuza.png"
+                        alt="Corporate Building" class="bento-item-bg-image">
+                    <div class="bento-item-overlay"></div>
+
+                    <div
+                        style="position: relative; z-index: 2; padding: 2.5rem; height: 100%; display: flex; flex-direction: column;">
+                        <span
+                            style="display: inline-block; padding: 6px 16px; background: rgba(255,255,255,0.8); border-radius: 20px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-blue); width: fit-content; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,1); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">Corporate</span>
+                        <h3>Smart strategies,<br>Smarter outcomes.</h3>
+                        <p style="color: var(--gray-dark); margin-top: 0.5rem;">Data-driven insights to help you
+                            navigate the complex corporate landscape. Secure transactions. High returns.</p>
+
+                        <div class="bento-mockup"
+                            style="margin-top: auto; padding: 1.5rem; background: rgba(255,255,255,0.75);">
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div
+                                    style="width: 56px; height: 56px; border-radius: 14px; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(0,0,0,0.08); font-size: 1.4rem; color: #4CAF50;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <div
+                                        style="font-size: 0.85rem; color: var(--gray-dark); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        Corporate Merger</div>
+                                    <div
+                                        style="font-weight: 800; color: var(--primary-dark); font-size: 1.3rem; margin-top: 2px;">
+                                        E3.2M Value</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Wide Card (Bottom Left) -->
+                <div class="bento-item col-span-2 gradient-glass text-reveal"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div style="z-index: 2;">
+                        <h3 style="font-size: 2.2rem; line-height: 1.2;">From single dispute<br>to a strong defense</h3>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 100%;">Our coordinated legal team
+                            handles the complexities of your case, leaving you with peace of mind and consistent
+                            support.</p>
+                        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary"
+                            style="padding: 12px 28px; font-size: 0.95rem; border-radius: 30px; box-shadow: 0 10px 20px rgba(13, 71, 161, 0.2);">Start
+                            Consultation</a>
+                    </div>
+
+                    <div class="bento-mockup" style="margin: 0; background: rgba(255,255,255,0.85); padding: 2rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="mockup-avatar"
+                                    style="width: 32px; height: 32px; background-image: url('https://randomuser.me/api/portraits/women/68.jpg'); background-size: cover; margin: 0;">
+                                </div>
+                                <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary-dark);">Dimples
+                                    M</span>
+                            </div>
+                            <span
+                                style="font-size: 0.9rem; font-weight: 800; color: #4CAF50; background: rgba(76, 175, 80, 0.1); padding: 4px 10px; border-radius: 20px;">98%
+                                Win Rate</span>
+                        </div>
+                        <div style="display: flex; gap: 6px; margin-bottom: 25px;">
+                            <div
+                                style="height: 32px; width: 100%; background: linear-gradient(90deg, #4CAF50, #81C784); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(76,175,80,0.3);">
+                            </div>
+                            <div
+                                style="height: 32px; width: 80%; background: linear-gradient(90deg, #4CAF50, #81C784); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(76,175,80,0.3);">
+                            </div>
+                            <div
+                                style="height: 32px; width: 90%; background: linear-gradient(90deg, #4CAF50, #81C784); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(76,175,80,0.3);">
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 20px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="mockup-avatar"
+                                    style="width: 32px; height: 32px; background-image: url('<?php echo get_template_directory_uri(); ?>/images/team/20.png'); background-size: cover; margin: 0;">
+                                </div>
+                                <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary-dark);">Seluleko
+                                    Malums</span>
+                            </div>
+                            <span
+                                style="font-size: 0.9rem; font-weight: 800; color: var(--primary-blue); background: rgba(13, 71, 161, 0.1); padding: 4px 10px; border-radius: 20px;">15+
+                                Yrs Exp</span>
+                        </div>
+                        <div style="display: flex; gap: 6px;">
+                            <div
+                                style="height: 32px; width: 70%; background: linear-gradient(90deg, var(--primary-blue), var(--accent-light-blue)); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(13,71,161,0.3);">
+                            </div>
+                            <div
+                                style="height: 32px; width: 60%; background: linear-gradient(90deg, var(--primary-blue), var(--accent-light-blue)); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(13,71,161,0.3);">
+                            </div>
+                            <div
+                                style="height: 32px; width: 85%; background: linear-gradient(90deg, var(--primary-blue), var(--accent-light-blue)); border-radius: 6px; opacity: 0.9; box-shadow: 0 2px 5px rgba(13,71,161,0.3);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS SECTION -->
+    <section style="padding: 5rem 1.5rem; background: var(--white-off); position: relative; overflow: hidden;">
+        <div class="section-container">
+            <div class="insights-layout text-reveal">
+                <div>
+                    <h2 style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1.5rem; font-weight: 800;">
+                        Data-driven<br><span
+                            style="font-style: italic; font-weight: 400; color: var(--primary-dark);">legal
+                            insights</span></h2>
+                    <p style="color: var(--gray-dark); margin-bottom: 3rem; font-size: 1.1rem; max-width: 90%;">Our
+                        platform leverages deep legal analytics and market trends to help you find the best path
+                        forward. We combine real-time data with intuitive strategies so you can secure optimal outcomes.
+                    </p>
+
+                    <div class="insights-list">
+                        <div class="insight-item">
+                            <h4><span style="color: var(--gray-medium); font-weight: 300;">01</span> Market Analytics
+                            </h4>
+                            <p>Analyze legal trends, case histories, and economic indicators to identify winning
+                                strategies.</p>
+                        </div>
+                        <div class="insight-item active">
+                            <h4><span style="color: rgba(255,255,255,0.4); font-weight: 300;">02</span> Predictive
+                                Insights</h4>
+                            <p>Use AI-driven forecasting to spot opportunities that match your goals and legal criteria.
+                            </p>
+                        </div>
+                        <div class="insight-item">
+                            <h4><span style="color: var(--gray-medium); font-weight: 300;">03</span> Actionable
+                                Recommendations</h4>
+                            <p>Receive clear, data-backed suggestions on strategies likely to deliver strong results.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-visual">
+                    <div class="bento-mockup"
+                        style="background: rgba(255,255,255,0.9); width: 85%; transform: none; padding: 2rem;">
+                        <div style="font-size: 1rem; font-weight: 700; color: var(--primary-dark);">Expected Settlement
+                        </div>
+                        <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary-dark); margin: 5px 0;">
+                            E96,437</div>
+                        <div
+                            style="font-size: 0.85rem; color: #4CAF50; font-weight: 700; background: rgba(76,175,80,0.1); padding: 4px 10px; border-radius: 12px; display: inline-block;">
+                            ↑ 18.4% vs initial offer</div>
+
+                        <div
+                            style="display: flex; align-items: flex-end; gap: 12px; margin-top: 3rem; height: 150px; border-bottom: 2px solid rgba(0,0,0,0.05); padding-bottom: 10px;">
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 30%; transition: all 0.3s;">
+                            </div>
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 50%; transition: all 0.3s;">
+                            </div>
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 40%; transition: all 0.3s;">
+                            </div>
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 60%; transition: all 0.3s;">
+                            </div>
+                            <div
+                                style="background: linear-gradient(to top, var(--primary-blue), var(--accent-light-blue)); width: 100%; border-radius: 6px 6px 0 0; height: 90%; position: relative; box-shadow: 0 4px 15px rgba(33,150,243,0.4);">
+                                <div
+                                    style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); background: var(--primary-blue); color: white; font-size: 0.8rem; font-weight: bold; padding: 4px 10px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                                    +20%</div>
+                            </div>
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 55%; transition: all 0.3s;">
+                            </div>
+                            <div
+                                style="background: rgba(13,71,161,0.2); width: 100%; border-radius: 6px 6px 0 0; height: 65%; transition: all 0.3s;">
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; margin-top: 10px; color: var(--gray-dark); font-size: 0.8rem; font-weight: 500;">
+                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span
+                                style="color: var(--primary-blue); font-weight: 700;">Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTS & SERVICES HIGHLIGHT (4x1 Grid) -->
+    <section style="padding: 5rem 1.5rem; background: var(--white-off); position: relative;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2 class="text-reveal">Our Expertise</h2>
+                <p class="section-subtitle text-reveal">Top-tier legal services and the experts who deliver them</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 4rem;"
+                id="featured-services-grid">
+                <!-- 4 Services will be loaded here via JS -->
+            </div>
+
+            <div class="section-title" style="margin-top: 2rem;">
+                <h3 class="text-reveal" style="font-size: 2rem;">Meet Our Senior Partners</h3>
+            </div>
+            <div class="grid grid-2" id="team-preview" style="max-width: 900px; margin: 0 auto;">
+                <!-- 2 Senior Partners will be loaded here via JS -->
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="<?php echo esc_url( home_url( '/services' ) ); ?>" class="btn btn-secondary">
+                    <i class="fas fa-list"></i> View All Services
+                </a>
+                <a href="<?php echo esc_url( home_url( '/team' ) ); ?>" class="btn btn-outlined" style="margin-left: 1rem;">
+                    <i class="fas fa-users"></i> Full Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT CASES / RESULTS SECTION -->
+    <section
+        style="background: linear-gradient(135deg, rgba(13, 71, 161, 0.08) 0%, rgba(21, 101, 192, 0.05) 100%); padding: 4rem 1.5rem;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2 class="text-reveal">Notable Results</h2>
+                <p class="section-subtitle text-reveal">Recent victories and successful case outcomes showcasing our
+                    expertise</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="glass-content-card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-briefcase" style="margin-right: 0.5rem;"></i> Corporate Merger Success
+                    </h4>
+                    <p>Successfully facilitated a E5M+ corporate merger for regional tech firm, navigating complex
+                        regulatory requirements and ensuring smooth transaction completion.</p>
+                    <p style="color: var(--accent-gold); font-weight: 600; margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> Completed in 6 weeks
+                    </p>
+                </div>
+
+                <div class="glass-content-card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-heart" style="margin-right: 0.5rem; color: #FF6B6B;"></i> Family Law Victory
+                    </h4>
+                    <p>Secured favorable custody and support arrangements for difficult family situation with extensive
+                        mediation and professional guidance.</p>
+                    <p style="color: var(--accent-gold); font-weight: 600; margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> Client Satisfaction: 100%
+                    </p>
+                </div>
+
+                <div class="glass-content-card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i> Criminal Defense Victory
+                    </h4>
+                    <p>Achieved not guilty verdict on serious criminal charges through thorough investigation and expert
+                        witness testimony.</p>
+                    <p style="color: var(--accent-gold); font-weight: 600; margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> Full Acquittal
+                    </p>
+                </div>
+
+                <div class="glass-content-card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-building" style="margin-right: 0.5rem;"></i> Real Estate Dispute Resolution
+                    </h4>
+                    <p>Resolved complex property boundary dispute involving multiple stakeholders and comprehensive
+                        historical documentation review.</p>
+                    <p style="color: var(--accent-gold); font-weight: 600; margin-top: 1rem;">
+                        <i class="fas fa-check-circle"></i> Favorable Settlement
+                    </p>
+                </div>
+            </div>
+        </div>
+    <!-- TEAM SPOTLIGHT (Hiding legacy team section) -->
+    <section style="display: none;" id="legacy-team-spotlight">
+        <div class="section-container">
+            <div class="section-title">
+                <h2 class="text-reveal">Our Expert Team</h2>
+                <p class="section-subtitle text-reveal">Experienced attorneys committed to your legal success</p>
+            </div>
+            <div class="grid grid-4" id="team-preview-legacy">
+                <!-- Loaded from JSON -->
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="<?php echo esc_url( home_url( '/team' ) ); ?>" class="btn btn-primary">
+                    <i class="fas fa-users"></i> View Full Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION WITH STICKY BANNER -->
+    <section
+        style="background: linear-gradient(135deg, rgba(13, 71, 161, 0.02) 0%, rgba(21, 101, 192, 0.02) 100%); padding: 4rem 1.5rem;">
+
+
+        <div class="section-container">
+            <div class="grid grid-3">
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: var(--accent-light-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Experienced Team</h4>
+                    <p>20+ years of combined legal expertise across diverse practice areas and complex cases.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Client-Focused</h4>
+                    <p>Your goals are our priority. We work tirelessly to achieve the best possible outcomes.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: #4CAF50; margin-bottom: 1rem;">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Professional Standards</h4>
+                    <p>Licensed attorneys maintaining the highest ethical standards and legal excellence.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: #FF6B6B; margin-bottom: 1rem;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Responsive Service</h4>
+                    <p>Quick turnaround times and consistent communication throughout your case.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: #9C27B0; margin-bottom: 1rem;">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Confidential</h4>
+                    <p>Your privacy and attorney-client privilege are our top priorities protected always.</p>
+                </div>
+                <div class="glass-card">
+                    <div style="font-size: 2.5rem; color: #FF9800; margin-bottom: 1rem;">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h4 style="color: var(--primary-blue);">Fair Pricing</h4>
+                    <p>Transparent fees and flexible payment options designed for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section
+        style="background: linear-gradient(135deg, rgba(13, 71, 161, 0.08) 0%, rgba(33, 150, 243, 0.06) 100%); padding: 4rem 1.5rem; position: relative;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2 class="text-reveal">Client Testimonials</h2>
+                <p class="section-subtitle text-reveal">Hear from satisfied clients about their experience with
+                    SwaziLegal</p>
+            </div>
+            
+            <!-- Testimonial Carousel -->
+            <div class="testimonial-carousel" id="testimonials-carousel">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Testimonials loaded from JSON -->
+                </div>
+                
+                <!-- Navigation Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-btn-prev" id="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" id="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Indicators -->
+                <div class="carousel-indicators" id="carousel-indicators">
+                    <!-- Indicators generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+        style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 4rem 1.5rem; text-align: center;">
+        <div class="section-container">
+            <h2 class="text-reveal" style="color: white; margin-bottom: 1.5rem;">
+                Ready to Protect Your Rights?
+            </h2>
+            <p class="text-reveal" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1.2rem;">
+                Schedule your free initial consultation today. Our experienced team is ready to help.
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+                <a href="tel:+26878132527" class="btn btn-outlined">
+                    <i class="fas fa-phone"></i> +268 76 805 805
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<?php get_footer(); ?>

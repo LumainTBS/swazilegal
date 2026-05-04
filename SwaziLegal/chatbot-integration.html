@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwaziLegal - Chatbot Integration Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0d47a1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .chatbot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chatbot-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chatbot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .chatbot-card h2 {
+            color: #0d47a1;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chatbot-card .icon {
+            font-size: 1.5rem;
+            color: #d4af37;
+        }
+
+        .chatbot-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .setup-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .setup-section h3 {
+            color: #0d47a1;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid #0d47a1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block code {
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #0d47a1;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #0d47a1;
+            box-shadow: 0 10px 25px rgba(13, 71, 161, 0.1);
+        }
+
+        .pricing-card h4 {
+            color: #0d47a1;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: #d4af37;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .price .period {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #0d47a1;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table th {
+            background: #f5f5f5;
+            color: #0d47a1;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background: #fafafa;
+        }
+
+        .check {
+            color: #4CAF50;
+        }
+
+        .cross {
+            color: #f44336;
+        }
+
+        .recommendation {
+            background: #e3f2fd;
+            border-left: 4px solid #0d47a1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .recommendation strong {
+            color: #0d47a1;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: #0d47a1;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .chatbot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 SwaziLegal Chatbot Integration Guide</h1>
+            <p>Choose the perfect chatbot solution for your legal services website</p>
+        </div>
+
+        <div class="chatbot-grid">
+            <!-- Drift Chatbot -->
+            <div class="chatbot-card">
+                <h2><span class="icon">💬</span> Drift (Recommended)</h2>
+                <p>Conversational AI with human handoff</p>
+                <ul class="features">
+                    <li>Pre-trained FAQ bot</li>
+                    <li>Live chat fallback</li>
+                    <li>Auto-routing to attorneys</li>
+                    <li>Email capture</li>
+                    <li>Conversation history</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Free Tier: ✅ Available
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <!-- Zendesk Answer Bot -->
+            <div class="chatbot-card">
+                <h2><span class="icon">🎯</span> Zendesk Answer Bot</h2>
+                <p>AI-powered support automation</p>
+                <ul class="features">
+                    <li>FAQ indexing from articles</li>
+                    <li>Multi-language support</li>
+                    <li>Sentiment analysis</li>
+                    <li>Ticket escalation</li>
+                    <li>Analytics dashboard</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Free Tier: ✅ Available
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <!-- Botpress -->
+            <div class="chatbot-card">
+                <h2><span class="icon">🚀</span> Botpress</h2>
+                <p>Open-source, fully customizable</p>
+                <ul class="features">
+                    <li>Self-hosted option</li>
+                    <li>Full control</li>
+                    <li>NLU capabilities</li>
+                    <li>Flow builder</li>
+                    <li>API integrations</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Free Tier: ✅ Available
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <!-- Intercom -->
+            <div class="chatbot-card">
+                <h2><span class="icon">👥</span> Intercom</h2>
+                <p>Customer communication platform</p>
+                <ul class="features">
+                    <li>Onsite messaging</li>
+                    <li>Help center integration</li>
+                    <li>Team inbox</li>
+                    <li>Automation workflows</li>
+                    <li>Lead capture forms</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Free Tier: ✅ Available
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <!-- Rasa (Self-Hosted) -->
+            <div class="chatbot-card">
+                <h2><span class="icon">⚡</span> Rasa</h2>
+                <p>Enterprise-grade conversational AI</p>
+                <ul class="features">
+                    <li>Complete open-source</li>
+                    <li>Custom training</li>
+                    <li>Full NLU/NLG</li>
+                    <li>On-premise hosting</li>
+                    <li>No vendor lock-in</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Free Tier: ✅ Available
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <!-- ChatGPT Integration -->
+            <div class="chatbot-card">
+                <h2><span class="icon">🧠</span> ChatGPT (Custom)</h2>
+                <p>AI-powered with OpenAI API</p>
+                <ul class="features">
+                    <li>Advanced NLU</li>
+                    <li>Context awareness</li>
+                    <li>Professional tone</li>
+                    <li>Multi-language</li>
+                    <li>Custom training</li>
+                </ul>
+                <div style="margin-top: 1rem; color: #d4af37; font-weight: bold;">
+                    Requires: API Key ($)
+                </div>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="setup-section">
+            <h3>Feature Comparison</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Drift</th>
+                        <th>Zendesk</th>
+                        <th>Botpress</th>
+                        <th>Intercom</th>
+                        <th>Rasa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free Tier</strong></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Setup Time</strong></td>
+                        <td>2 min</td>
+                        <td>5 min</td>
+                        <td>10 min</td>
+                        <td>3 min</td>
+                        <td>30 min</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customization</strong></td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>Very High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Quality</strong></td>
+                        <td>Good</td>
+                        <td>Very Good</td>
+                        <td>Good</td>
+                        <td>Good</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Live Chat</strong></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Self-Hosted</strong></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Implementation Examples -->
+        <div class="setup-section">
+            <h3>🔧 Implementation Examples</h3>
+
+            <!-- Drift -->
+            <h4 style="color: #0d47a1; margin-top: 2rem; margin-bottom: 1rem;">
+                1. Drift Chatbot (Easiest - Recommended for Most)
+            </h4>
+            <p style="color: #666; margin-bottom: 1rem;">Add this single script to your website header. No other configuration needed.</p>
+            <div class="code-block"><code>&lt;!-- Add to &lt;head&gt; section --&gt;
+&lt;script&gt;
+  !function() {
+    var t = window.driftt = window.drift = window.drift || [], e = !1;
+    if (!t.identify)
+      return void (t.addLoad = function(n) {
+        var a = document.createElement("script");
+        a.async = !0, a.src = n, document.head.appendChild(a);
+      });
+    t.load("YOUR_DRIFT_ID");
+  }();
+&lt;/script&gt;</code></div>
+            <p style="color: #666; margin: 1rem 0;">
+                <strong>Steps:</strong><br>
+                1. Sign up at drift.com (free tier)<br>
+                2. Get your Drift ID from dashboard<br>
+                3. Replace YOUR_DRIFT_ID with your actual ID<br>
+                4. Paste script into &lt;head&gt; of every page<br>
+                5. Configure bot responses in Drift dashboard
+            </p>
+
+            <!-- Botpress Cloud -->
+            <h4 style="color: #0d47a1; margin-top: 2rem; margin-bottom: 1rem;">
+                2. Botpress Cloud Chatbot (Easy - More Control)
+            </h4>
+            <p style="color: #666; margin-bottom: 1rem;">Botpress provides a pre-built widget for quick integration.</p>
+            <div class="code-block"><code>&lt;script src="https://cdn.botpress.cloud/webchat/v1/inject.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.botpressWebChat.init({
+    botId: "YOUR_BOT_ID",
+    hostUrl: "https://cdn.botpress.cloud/webchat",
+    messagingUrl: "https://messaging.botpress.cloud",
+    clientId: "YOUR_CLIENT_ID"
+  });
+&lt;/script&gt;</code></div>
+            <p style="color: #666; margin: 1rem 0;">
+                <strong>Steps:</strong><br>
+                1. Sign up at botpress.com<br>
+                2. Create new bot in dashboard<br>
+                3. Get Bot ID and Client ID<br>
+                4. Add script to website<br>
+                5. Train bot with FAQ content
+            </p>
+
+            <!-- Custom Chatbot HTML/CSS/JS -->
+            <h4 style="color: #0d47a1; margin-top: 2rem; margin-bottom: 1rem;">
+                3. Custom Chatbot Widget (Full Control)
+            </h4>
+            <p style="color: #666; margin-bottom: 1rem;">Build your own chatbot using HTML, CSS, and JavaScript.</p>
+            <div class="code-block"><code>&lt;!-- Add to your HTML body --&gt;
+&lt;div id="chatbot-widget" class="chatbot-container"&gt;
+  &lt;div class="chatbot-header"&gt;
+    &lt;h3&gt;💬 SwaziLegal Assistant&lt;/h3&gt;
+    &lt;button id="close-chatbot"&gt;×&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div id="chatbot-messages" class="chatbot-messages"&gt;&lt;/div&gt;
+  &lt;div class="chatbot-input"&gt;
+    &lt;input type="text" id="user-message" placeholder="Ask about our services..."&gt;
+    &lt;button id="send-btn"&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></div>
+
+            <!-- JavaScript for Custom Chatbot -->
+            <h4 style="color: #0d47a1; margin-top: 1rem; margin-bottom: 1rem;">Add JavaScript Logic:</h4>
+            <div class="code-block"><code>// FAQ Knowledge Base
+const faqData = {
+  "practice areas": "We offer services in Corporate Law, Family Law, Criminal Defense, and more.",
+  "consultation": "Schedule a free consultation at https://swazilegal.sz/contact",
+  "contact": "Call: +268 76 805 805 | WhatsApp: +268 78132527",
+  "team": "Our team includes experienced attorneys across multiple practice areas.",
+  "services": "Visit our services page to learn about all available legal services."
+};
+
+// Simple matching function
+function findAnswer(question) {
+  const lower = question.toLowerCase();
+  for (let [key, answer] of Object.entries(faqData)) {
+    if (lower.includes(key)) return answer;
+  }
+  return "I didn't understand that. Try asking about: practice areas, consultation, contact, team, or services.";
+}
+
+// Send message handler
+document.getElementById("send-btn").addEventListener("click", () => {
+  const message = document.getElementById("user-message").value;
+  if (!message.trim()) return;
+  
+  // Add user message
+  addMessage(message, "user");
+  
+  // Get bot response
+  const answer = findAnswer(message);
+  setTimeout(() => addMessage(answer, "bot"), 500);
+  
+  document.getElementById("user-message").value = "";
+});
+
+// Add message to chat
+function addMessage(text, sender) {
+  const container = document.getElementById("chatbot-messages");
+  const msgDiv = document.createElement("div");
+  msgDiv.className = `message ${sender}`;
+  msgDiv.innerHTML = `&lt;p&gt;${text}&lt;/p&gt;`;
+  container.appendChild(msgDiv);
+  container.scrollTop = container.scrollHeight;
+}</code></div>
+
+            <!-- CSS for Custom Chatbot -->
+            <h4 style="color: #0d47a1; margin-top: 1rem; margin-bottom: 1rem;">Add Styling:</h4>
+            <div class="code-block"><code">.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  max-height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+.message {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.user p {
+  background: #0d47a1;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 12px;
+  max-width: 70%;
+}
+
+.message.bot p {
+  background: #e0e0e0;
+  color: #333;
+  padding: 0.8rem;
+  border-radius: 12px;
+  max-width: 70%;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.chatbot-input button {
+  padding: 0.8rem 1.5rem;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chatbot-input button:hover {
+  background: #1565c0;
+}
+
+@media (max-width: 600px) {
+  .chatbot-container {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    bottom: 10px;
+    right: 10px;
+  }
+}</code></div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="setup-section">
+            <h3>✅ Recommended Setup for SwaziLegal</h3>
+            
+            <div class="recommendation">
+                <strong>For Quick Deployment (2 minutes):</strong><br>
+                Use <strong>Drift</strong> or <strong>Intercom</strong>. Both have free tiers and require only a script embed. No coding needed.
+            </div>
+
+            <div class="recommendation">
+                <strong>For FAQ Bot (5 minutes):</strong><br>
+                Use <strong>Zendesk Answer Bot</strong>. It automatically indexes your FAQ articles and provides intelligent responses.
+            </div>
+
+            <div class="recommendation">
+                <strong>For Full Customization (30 minutes):</strong><br>
+                Use the <strong>Custom Chatbot Widget</strong> code above. Fully under your control, can be trained with your specific legal content.
+            </div>
+
+            <div class="recommendation">
+                <strong>For Enterprise Solution (Advanced):</strong><br>
+                Use <strong>Rasa</strong> with custom NLU training. Best for handling complex legal queries and advanced automation.
+            </div>
+        </div>
+
+        <!-- WordPress Integration -->
+        <div class="setup-section">
+            <h3>🔗 WordPress Integration</h3>
+            <p style="color: #666; margin-bottom: 1rem;">
+                To add a chatbot to your WordPress theme, add the script to your theme's footer or use a plugin.
+            </p>
+
+            <h4 style="color: #0d47a1; margin: 1rem 0;">Method 1: Add to Theme Footer (functions.php)</h4>
+            <div class="code-block"><code>// Add to wp-content/themes/swazilegal-theme/functions.php
+add_action('wp_footer', 'add_chatbot_script');
+function add_chatbot_script() {
+    ?>
+    &lt;script&gt;
+      !function() {
+        var t = window.driftt = window.drift || [], e = !1;
+        if (!t.identify)
+          return void (t.addLoad = function(n) {
+            var a = document.createElement("script");
+            a.async = !0, a.src = n, document.head.appendChild(a);
+          });
+        t.load("YOUR_DRIFT_ID");
+      }();
+    &lt;/script&gt;
+    <?php
+}
+?></code></div>
+
+            <h4 style="color: #0d47a1; margin: 1rem 0;">Method 2: Use Code Snippets Plugin</h4>
+            <p style="color: #666; margin-bottom: 1rem;">
+                1. Install "Code Snippets" plugin<br>
+                2. Add new snippet with chatbot script<br>
+                3. Enable and save<br>
+                4. Script automatically added to all pages
+            </p>
+
+            <h4 style="color: #0d47a1; margin: 1rem 0;">Method 3: Add to Theme Header (header.php)</h4>
+            <div class="code-block"><code">// In wp-content/themes/swazilegal-theme/header.php
+// Add before &lt;/head&gt; tag:
+
+&lt;script src="https://cdn.botpress.cloud/webchat/v1/inject.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.botpressWebChat.init({
+    botId: "YOUR_BOT_ID",
+    hostUrl: "https://cdn.botpress.cloud/webchat"
+  });
+&lt;/script&gt;</code></div>
+        </div>
+
+        <!-- Training Data Template -->
+        <div class="setup-section">
+            <h3>📚 Training Data Template for Chatbot</h3>
+            <p style="color: #666; margin-bottom: 1rem;">
+                Use this template to train your chatbot with SwaziLegal's specific information.
+            </p>
+
+            <div class="code-block"><code>INTENT: practice_areas
+USER: What practice areas do you serve?
+BOT: We provide expert legal services in:
+- Corporate & Commercial Law
+- Family Law
+- Criminal Defense
+- Labor & Employment Law
+- Property & Conveyancing
+- Estate Administration
+- Civil Litigation
+- Notarial Services
+
+INTENT: consultation
+USER: How do I schedule a consultation?
+BOT: You can schedule a free consultation in three ways:
+1. Call us: +268 76 805 805
+2. WhatsApp: +268 78132527
+3. Visit: https://swazilegal.sz/contact
+
+INTENT: contact_info
+USER: What's your contact number?
+BOT: Contact SwaziLegal:
+📞 Phone: +268 2687 8132527
+💬 WhatsApp: +268 78132527
+📧 Email: info@swazilegal.sz
+📍 Location: Mbabane, Eswatini
+
+INTENT: team_info
+USER: Tell me about your team
+BOT: Our team consists of experienced attorneys specializing in various practice areas. 
+Visit https://swazilegal.sz/team to meet our team members.
+
+INTENT: services
+USER: What services do you offer?
+BOT: Our main services include:
+- Legal consultation & advice
+- Contract drafting & review
+- Litigation representation
+- Estate planning
+- Corporate formation
+- And much more!
+Visit https://swazilegal.sz/services for details.
+
+INTENT: appointment_status
+USER: What's my appointment status?
+BOT: To check your appointment status, please provide your phone number.
+Or contact us directly at +268 78132527
+
+INTENT: whatsapp_booking
+USER: How do I book via WhatsApp?
+BOT: You can easily book an appointment via WhatsApp:
+1. Click: https://wa.me/26878132527
+2. Send your details (name, date, service type)
+3. Our team will confirm your appointment
+4. Receive confirmation via WhatsApp</code></div>
+        </div>
+
+        <!-- Demo Section -->
+        <div class="demo-section">
+            <h2>Try the Custom Chatbot Demo</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Click below to see the chatbot in action</p>
+            <button class="btn" onclick="openDemoChat()">Open Demo Chatbot</button>
+        </div>
+    </div>
+
+    <!-- Custom Chatbot Widget (Demo) -->
+    <div id="chatbot-widget" style="display:none; position: fixed; bottom: 20px; right: 20px; width: 400px; max-height: 600px; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column; z-index: 9999; font-family: 'Segoe UI', sans-serif;">
+        <div style="background: linear-gradient(135deg, #0d47a1, #1565c0); color: white; padding: 1rem; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1rem;">💬 SwaziLegal Assistant</h3>
+            <button onclick="closeDemoChat()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div id="chatbot-messages" style="flex: 1; overflow-y: auto; padding: 1rem; background: #f9f9f9; max-height: 400px;"></div>
+        <div style="display: flex; gap: 0.5rem; padding: 1rem; border-top: 1px solid #e0e0e0;">
+            <input type="text" id="user-message" placeholder="Ask about our services..." style="flex: 1; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+            <button onclick="sendMessage()" style="padding: 0.8rem 1.5rem; background: #0d47a1; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const faqData = {
+            "practice areas": "We offer services in Corporate Law, Family Law, Criminal Defense, Labor & Employment Law, Property & Conveyancing, Estate Administration, Civil Litigation, and Notarial Services.",
+            "consultation": "You can schedule a free consultation by calling +268 76 805 805, WhatsApp +268 78132527, or visiting https://swazilegal.sz/contact",
+            "contact": "📞 Phone: +268 2687 8132527 | 💬 WhatsApp: +268 78132527 | 📧 Email: info@swazilegal.sz | 📍 Mbabane, Eswatini",
+            "team": "Our experienced team specializes in various practice areas. Visit https://swazilegal.sz/team to meet our attorneys.",
+            "services": "Visit https://swazilegal.sz/services to learn about all available legal services.",
+            "appointment": "To check your appointment status, please provide your phone number or contact +268 78132527",
+            "whatsapp": "Click https://wa.me/26878132527 to book via WhatsApp. Send your details and our team will confirm.",
+            "pricing": "Contact us for a consultation and we'll discuss fees based on your specific legal matter."
+        };
+
+        function findAnswer(question) {
+            const lower = question.toLowerCase();
+            for (let [key, answer] of Object.entries(faqData)) {
+                if (lower.includes(key)) return answer;
+            }
+            return "I didn't understand that. Try asking about: practice areas, consultation, contact, team, services, appointment, WhatsApp booking, or pricing.";
+        }
+
+        function addMessage(text, sender) {
+            const container = document.getElementById("chatbot-messages");
+            const msgDiv = document.createElement("div");
+            msgDiv.style.marginBottom = "1rem";
+            msgDiv.style.display = "flex";
+            if (sender === "user") msgDiv.style.justifyContent = "flex-end";
+            
+            const p = document.createElement("p");
+            p.style.padding = "0.8rem";
+            p.style.borderRadius = "12px";
+            p.style.maxWidth = "70%";
+            p.style.margin = "0";
+            
+            if (sender === "user") {
+                p.style.background = "#0d47a1";
+                p.style.color = "white";
+            } else {
+                p.style.background = "#e0e0e0";
+                p.style.color = "#333";
+            }
+            
+            p.textContent = text;
+            msgDiv.appendChild(p);
+            container.appendChild(msgDiv);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("user-message");
+            const message = input.value.trim();
+            if (!message) return;
+            
+            addMessage(message, "user");
+            input.value = "";
+            
+            setTimeout(() => {
+                const answer = findAnswer(message);
+                addMessage(answer, "bot");
+            }, 500);
+        }
+
+        function openDemoChat() {
+            document.getElementById("chatbot-widget").style.display = "flex";
+            const container = document.getElementById("chatbot-messages");
+            container.innerHTML = "";
+            addMessage("👋 Hello! I'm SwaziLegal's AI Assistant. How can I help you today?", "bot");
+        }
+
+        function closeDemoChat() {
+            document.getElementById("chatbot-widget").style.display = "none";
+        }
+
+        // Allow Enter key to send message
+        document.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && document.getElementById("user-message") === document.activeElement) {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

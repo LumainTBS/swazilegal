@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the comprehensive legal services offered by SwaziLegal in Eswatini.">
+    <title>Our Services - SwaziLegal</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; gap: 1rem;">
+                <img src="images/logo.png" alt="SwaziLegal Logo" style="height: 50px; width: auto;">
+                <span style="color: var(--primary-dark); font-weight: 700; font-size: 1.3rem;">SwaziLegal</span>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="practices.html">Practice Areas</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: url('images/hero/Hero.jpeg'); min-height: 40vh; height: 40vh;">
+        <div class="hero-content">
+            <h1 style="color: white;" class="text-reveal">Our <span class="accent">Services</span></h1>
+            <p style="color: rgba(255,255,255,0.9);" class="text-reveal">
+                Comprehensive legal solutions tailored to your specific needs
+            </p>
+        </div>
+        <div class="hero-gradient-bottom"></div>
+
+    </section>
+
+    <!-- SERVICES GRID SECTION -->
+    <div class="section-container overlap-section">
+        <div class="masonry-grid" id="services-grid">
+            <!-- Dynamically loaded from JSON -->
+        </div>
+    </div>
+
+    <!-- WHATSAPP BOOKING SECTION -->
+    <section id="booking-section" style="padding: 5rem 1.5rem; position: relative; overflow: hidden;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2 class="text-reveal">Secure Your Appointment</h2>
+                <p class="section-subtitle text-reveal">Provide your details and we'll confirm via WhatsApp shortly</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 350px; gap: 2rem; align-items: start;">
+                <!-- Booking Form -->
+                <div class="premium-glass" style="padding: 3rem; color: var(--primary-dark);">
+                    <form id="whatsapp-booking-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name</label>
+                                <input type="text" id="booking-name" required placeholder="Full Name" 
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone Number</label>
+                                <input type="tel" id="booking-phone" required placeholder="+268 7xxx xxxx" 
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                                <input type="email" id="booking-email" required placeholder="email@example.sz" 
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Preferred Date</label>
+                                <input type="date" id="booking-date" required
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Select Lawyer</label>
+                                <select id="booking-lawyer" required
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                                    <option value="">Choose Lawyer...</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Select Service</label>
+                                <select id="booking-service" required
+                                    style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);">
+                                    <option value="">Choose Service...</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Brief Case Summary</label>
+                            <textarea id="booking-message" rows="3" placeholder="Tell us more about your case"
+                                style="width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6);"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.2rem; font-size: 1.1rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Request WhatsApp Confirmation
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Appointment Status Sidecard -->
+                <div class="premium-glass" style="padding: 2rem; color: var(--primary-dark); height: fit-content;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">
+                        <i class="fas fa-clock"></i> Appointment Status
+                    </h3>
+                    <div id="appointment-tracker-ui">
+                        <div style="text-align: center; padding: 2rem 1rem;">
+                            <i class="fas fa-calendar-check" style="font-size: 3rem; color: var(--gray-medium); opacity: 0.3; margin-bottom: 1rem;"></i>
+                            <p style="color: var(--gray-dark); font-size: 0.9rem;">No active requests found.<br>Fill out the form to start.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.8rem; color: var(--gray-medium);">
+                        <p><i class="fas fa-info-circle"></i> Once submitted, your request is sent to our legal team via WhatsApp. You will receive an "Approved" or "Rescheduled" message directly on your phone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <footer-container>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SwaziLegal</h4>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        Your trusted legal partner in Eswatini
+                    </p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                        <strong>Address:</strong><br>
+                        Mbabane, Eswatini
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practices.html">Practice Areas</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:+26878132527"><i class="fas fa-phone"></i> +268 76 805 805</a></li>
+                        <li><a href="https://wa.me/26878132527" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                        <li><a href="mailto:info@swazilegal.sz"><i class="fas fa-envelope"></i> info@swazilegal.sz</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwaziLegal. All rights reserved. Licensed to practice in Eswatini.</p>
+            </div>
+        </footer-container>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/scroll-animations.js"></script>
+</body>
+
+</html>

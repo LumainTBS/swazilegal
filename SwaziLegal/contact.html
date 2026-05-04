@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact SwaziLegal - Get in touch with our attorneys">
+    <title>Contact SwaziLegal</title>    <link rel="icon" type="image/png" href="images/logo.png">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; gap: 1rem;">
+                <img src="images/logo.png" alt="SwaziLegal Logo" style="height: 50px; width: auto;">
+                <span style="color: var(--primary-dark); font-weight: 700; font-size: 1.3rem;">SwaziLegal</span>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="practices.html">Practice Areas</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: url('images/hero/Hero.jpeg'); min-height: 40vh; height: 40vh;">
+        <div class="hero-content">
+            <h1 style="color: white;" class="text-reveal">Contact <span class="accent">Us</span></h1>
+            <p style="color: rgba(255,255,255,0.9);" class="text-reveal">
+                We're here to help. Get in touch with our team
+            </p>
+        </div>
+        <div class="hero-gradient-bottom"></div>
+        <div class="hero-floating-card left text-reveal">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <i class="fas fa-headset" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                <span style="font-weight: 700;">24/7</span>
+            </div>
+            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">Support Availability</div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFORMATION & FORM -->
+    <section style="padding: 0 1.5rem 5rem 1.5rem; background: var(--white-off);">
+        <div class="section-container overlap-section">
+            <div class="overlap-card grid grid-2" style="background: rgba(255,255,255,0.95); gap: 4rem;">
+                <!-- CONTACT INFO -->
+                <div>
+                    <h2>Get In Touch</h2>
+                    <p style="margin-bottom: 2rem;">
+                        We're ready to discuss your legal matter. Contact us through any of the following channels:
+                    </p>
+
+                    <div class="glass-card minimal" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem;"><i class="fas fa-phone"></i> Phone
+                        </h4>
+                        <p style="margin-bottom: 0.5rem;"><strong>+268 2687 8132527</strong></p>
+                        <p style="font-size: 0.9rem; color: var(--gray-dark);">Available Monday-Friday, 8am-5pm</p>
+                    </div>
+
+                    <div class="glass-card minimal" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem;"><i class="fab fa-whatsapp"></i>
+                            WhatsApp</h4>
+                        <p style="margin-bottom: 0.5rem;">
+                            <a href="https://wa.me/26878132527" target="_blank"
+                                style="color: var(--accent-blue); font-weight: 600;">
+                                Message us on WhatsApp
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--gray-dark);">Quick responses to booking inquiries</p>
+                    </div>
+
+                    <div class="glass-card minimal" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem;"><i class="fas fa-envelope"></i>
+                            Email</h4>
+                        <p style="margin-bottom: 0.5rem;">
+                            <a href="mailto:info@swazilegal.sz" style="color: var(--accent-blue); font-weight: 600;">
+                                info@swazilegal.sz
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--gray-dark);">We'll respond within 24 hours</p>
+                    </div>
+
+                    <div class="glass-card minimal">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem;"><i
+                                class="fas fa-map-marker-alt"></i> Location</h4>
+                        <p style="margin-bottom: 0.5rem;"><strong>Mbabane, Eswatini</strong></p>
+                        <p style="font-size: 0.9rem; color: var(--gray-dark);">For office visits, please call ahead for
+                            appointment</p>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="form-container">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark);">Send us a Message</h3>
+                    <form id="contact-form" style="margin: 0;">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="practice">Practice Area *</label>
+                            <select id="practice" name="practice" required>
+                                <option value="">Select a practice area...</option>
+                                <option value="Corporate">Corporate & Commercial Law</option>
+                                <option value="Family">Family Law</option>
+                                <option value="Criminal">Criminal Law</option>
+                                <option value="Employment">Labor & Employment Law</option>
+                                <option value="Real Estate">Real Estate & Property Law</option>
+                                <option value="Intellectual Property">Intellectual Property</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message
+                        </button>
+
+                        <p style="font-size: 0.85rem; color: var(--gray-dark); margin-top: 1rem;">
+                            By submitting this form, you agree that we may contact you regarding your inquiry.
+                        </p>
+                    </form>
+                    <div id="form-message" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section
+        style="background: linear-gradient(135deg, rgba(21, 101, 192, 0.05) 0%, rgba(33, 150, 243, 0.03) 100%); padding: 4rem 1.5rem; position: relative;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How quickly will you respond to my inquiry?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us
+                        directly at +268 2687 8132527.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Is the initial consultation free?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        We offer a free 30-minute initial consultation to discuss your legal matter and determine how we
+                        can best assist you.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do you offer virtual consultations?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        Yes! We offer phone, video, and in-person consultations to accommodate your preferences and
+                        schedule.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What information should I bring to my consultation?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        Please gather any relevant documents, contracts, correspondence, or information related to your
+                        legal matter. This helps us provide more accurate guidance.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Is there a better time to reach you?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        We're available Monday through Friday from 8am to 5pm. For after-hours emergencies, you can
+                        leave a voicemail and we'll respond the next business day.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <footer-container>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SwaziLegal</h4>
+                    <p style="color: rgba(255,255,255,0.8);">Your trusted legal partner</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="practices.html">Practice Areas</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+26878132527"><i class="fas fa-phone"></i> +268 2687 8132527</a></li>
+                        <li><a href="https://wa.me/26878132527"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="mailto:info@swazilegal.sz"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwaziLegal. All rights reserved.</p>
+            </div>
+        </footer-container>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+{
+  "firm": {
+    "name": "SwaziLegal",
+    "tagline": "Excellence in Legal Excellence",
+    "description": "Your trusted partner for comprehensive legal solutions in Eswatini",
+    "phone": "+268 2687 8132527",
+    "whatsapp": "26878132527",
+    "email": "info@swazilegal.sz",
+    "address": "Mbabane, Eswatini",
+    "established": 2015
+  },
+  "team": [
+    {
+      "id": 1,
+      "name": "Malumane Thembumenzi S",
+      "title": "Senior Partner & Head of Corporate Law",
+      "specialty": "Corporate Law, M&A, Business Contracts",
+      "bio": "With over 15 years of experience in corporate law and mergers & acquisitions, Malumane brings strategic expertise to complex business transactions.",
+      "avatar": "👨‍⚖️",
+      "email": "malumane@swazilegal.sz",
+      "image": "images/team/21.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mabuza S'cabangile T",
+      "title": "Partner & Head of Family Law",
+      "specialty": "Family Law, Divorce, Inheritance",
+      "bio": "Specializing in family matters with sensitivity and professionalism, S'cabangile has successfully represented clients in complex family law cases.",
+      "avatar": "👩‍⚖️",
+      "email": "scabangile@swazilegal.sz",
+      "image": "images/team/sca.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Nhlanhla Masango",
+      "title": "Senior Associate - Criminal Law",
+      "specialty": "Criminal Defense, Litigation, Appeals",
+      "bio": "An aggressive criminal defense advocate with a proven track record of successful case outcomes. Dedicated to upholding justice and protecting clients' rights.",
+      "avatar": "👨‍⚖️",
+      "email": "nhlanhla@swazilegal.sz",
+      "image": "images/team/malumane.png"
+    },
+    {
+      "id": 4,
+      "name": "Thandi Khubone",
+      "title": "Associate - Labor & Employment Law",
+      "specialty": "Employment Rights, Labor Disputes, Compliance",
+      "bio": "Expert in labor law and employment matters, providing guidance to both employers and employees on workplace rights and obligations.",
+      "avatar": "👩‍⚖️",
+      "email": "thandi@swazilegal.sz",
+      "image": "images/team/mabuza.png"
+    }
+  ],
+  "practices": [
+    {
+      "id": 1,
+      "name": "Property & Conveyancing",
+      "description": "Expert guidance on title deed registrations, property transfers, and land lease agreements in Eswatini.",
+      "icon": "🏠",
+      "faIcon": "fas fa-home",
+      "image": "images/practices/P1.jpg",
+      "services": [
+        "Property Transfers",
+        "Bond Registrations",
+        "Lease Agreements",
+        "Sectional Title Schemes",
+        "Title Deed Searches"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Family & Customary Law",
+      "description": "Navigating the complexities of both Civil and Customary marriages, inheritance, and family disputes.",
+      "icon": "👨‍👩‍👧‍👦",
+      "faIcon": "fas fa-heart",
+      "image": "images/practices/family-law.jpg",
+      "services": [
+        "Civil & Customary Divorce",
+        "Child Custody",
+        "Maintenance Claims",
+        "Succession & Inheritance",
+        "Matrimonial Property"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Estate Administration",
+      "description": "Comprehensive handling of deceased estates through the Master of the High Court.",
+      "icon": "📜",
+      "faIcon": "fas fa-file-contract",
+      "image": "images/practices/estates.jpg",
+      "services": [
+        "Will Drafting",
+        "Deceased Estate Registration",
+        "Executor Appointments",
+        "Distribution Accounts",
+        "Trust Formation"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Corporate & Commercial",
+      "description": "Business legal solutions for startups and established enterprises in the Kingdom.",
+      "icon": "🏢",
+      "faIcon": "fas fa-building",
+      "image": "images/practices/P2.jpg",
+      "services": [
+        "Company Registrations",
+        "Partnership Agreements",
+        "Commercial Litigation",
+        "Tax Law Advice",
+        "Contractual Disputes"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Labor & Employment",
+      "description": "Expert representation in Industrial Court, CMAC, and workplace disciplinary hearings.",
+      "icon": "💼",
+      "faIcon": "fas fa-briefcase",
+      "image": "images/practices/labor-law.jpg",
+      "services": [
+        "CMAC Representation",
+        "Industrial Court Litigation",
+        "Retrenchment Advice",
+        "Disciplinary Hearing Charing",
+        "Employment Policies"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Civil Litigation",
+      "description": "High Court and Magistrate Court representation for a wide range of legal disputes.",
+      "icon": "⚖️",
+      "faIcon": "fas fa-balance-scale",
+      "image": "images/practices/litigation.jpg",
+      "services": [
+        "Debt Collection",
+        "Personal Injury Claims",
+        "Medical Malpractice",
+        "Defamation Suits",
+        "Urgent Applications"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Notarial Services",
+      "description": "Legalization and attestation of documents for local and international use.",
+      "icon": "🖊️",
+      "faIcon": "fas fa-pen-nib",
+      "image": "images/practices/notarial.jpg",
+      "services": [
+        "Antenuptial Contracts",
+        "Authentication of Documents",
+        "Apostille Services",
+        "Notarial Bonds",
+        "Powers of Attorney"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How do I schedule a consultation?",
+      "answer": "You can schedule a consultation through our website appointment system, call us at +268 2687 8132527, or send us an email at info@swazilegal.sz. We also accept WhatsApp inquiries for your convenience."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "client": "John Dlamini",
+      "company": "Dlamini Enterprises",
+      "text": "SwaziLegal handled our corporate merger with exceptional professionalism. Their strategic advice saved us significant time and resources.",
+      "rating": 5,
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "id": 2,
+      "client": "Thandi Mhlongo",
+      "company": "Individual",
+      "text": "I was going through a difficult divorce and Mabuza's compassion and expertise made all the difference. Highly recommend their family law services!",
+      "rating": 4,
+      "avatar": "https://randomuser.me/api/portraits/women/47.jpg"
+    },
+    {
+      "id": 3,
+      "client": "Sizwe Khumalo",
+      "company": "Khumalo Manufacturing Ltd",
+      "text": "The team at SwaziLegal provided outstanding criminal defense representation. Their dedication to justice is unparalleled.",
+      "rating": 5,
+      "avatar": "https://randomuser.me/api/portraits/men/18.jpg"
+    },
+    {
+      "id": 4,
+      "client": "Lindiwe Zwane",
+      "company": "Zwane Property Investments",
+      "text": "Excellent service in handling our property transfers and bond registrations. Professional, efficient, and transparent throughout the process.",
+      "rating": 5,
+      "avatar": "https://randomuser.me/api/portraits/women/62.jpg"
+    },
+    {
+      "id": 5,
+      "client": "Mpumelelo Sibaya",
+      "company": "Sibaya & Co Legal Consulting",
+      "text": "Their labor law expertise helped us navigate complex employment disputes with ease. Truly exceptional legal guidance.",
+      "rating": 5,
+      "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
+    },
+    {
+      "id": 6,
+      "client": "Naledi Motlanthe",
+      "company": "Individual",
+      "text": "The estate administration services were seamless and professional. They made a difficult time much easier for our family.",
+      "rating": 5,
+      "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+    }
+  ]
+}

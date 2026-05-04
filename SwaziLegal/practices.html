@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Practice areas at SwaziLegal - Corporate law, family law, criminal defense, employment law, and more">
+    <title>Practice Areas - SwaziLegal</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none; gap: 1rem;">
+                <img src="images/logo.png" alt="SwaziLegal Logo" style="height: 50px; width: auto;">
+                <span style="color: var(--primary-dark); font-weight: 700; font-size: 1.3rem;">SwaziLegal</span>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="practices.html">Practice Areas</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: url('images/hero/H2.jpg'); min-height: 40vh; height: 40vh;">
+        <div class="hero-content">
+            <h1 style="color: white;" class="text-reveal">Practice <span class="accent">Areas</span></h1>
+            <p style="color: rgba(255,255,255,0.9);" class="text-reveal">
+                Comprehensive legal services across multiple practice areas
+            </p>
+        </div>
+        <div class="hero-gradient-bottom"></div>
+        <div class="hero-floating-card left text-reveal">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <i class="fas fa-file-contract" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                <span style="font-weight: 700;">Full Service</span>
+            </div>
+            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">All legal disciplines</div>
+        </div>
+    </section>
+
+    <!-- PRACTICE AREAS FULL LIST -->
+    <div class="section-container overlap-section">
+        <div id="practices-full-list" class="overlap-grid">
+            <!-- Loaded from JSON -->
+        </div>
+    </div>
+
+    <!-- DETAILED PRACTICES -->
+    <section id="practice-details"
+        style="background: linear-gradient(135deg, rgba(21, 101, 192, 0.05) 0%, rgba(33, 150, 243, 0.03) 100%); padding: 4rem 1.5rem; position: relative;">
+        <div class="section-container" id="detailed-practices">
+            <!-- Loaded from JSON -->
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="padding: 4rem 1.5rem;">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Practice Area FAQs</h2>
+            </div>
+            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What practice area should I contact?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        Based on your legal issue, choose the relevant practice area from our list.
+                        However, if you're unsure, feel free to contact us directly at +268 2687 8132527
+                        and we can guide you to the appropriate attorney.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do you handle matters outside these practice areas?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        While these are our main practice areas, we may be able to assist with other matters
+                        or refer you to appropriate specialists. Please contact us to discuss your specific situation.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I have one attorney handling multiple types of cases?</span>
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        Yes! Some of our experienced attorneys practice in multiple areas.
+                        We'll ensure you have the most appropriate expertise for your situation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="background: var(--gradient-accent); padding: 4rem 1.5rem; text-align: center;">
+        <div class="section-container">
+            <h2 style="color: white; margin-bottom: 1.5rem;">
+                Need Legal Assistance?
+            </h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                Contact us to discuss your legal matter with an experienced attorney
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <footer-container>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SwaziLegal</h4>
+                    <p style="color: rgba(255,255,255,0.8);">Your trusted legal partner</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="practices.html">Practice Areas</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+26878132527"><i class="fas fa-phone"></i> +268 2687 8132527</a></li>
+                        <li><a href="https://wa.me/26878132527"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="mailto:info@swazilegal.sz"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SwaziLegal. All rights reserved.</p>
+            </div>
+        </footer-container>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
